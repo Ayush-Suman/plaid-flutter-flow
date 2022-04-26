@@ -1,6 +1,3 @@
-
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:plaid_flutter/plaid_flutter.dart';
 import 'package:plaid_link/values/colors.dart';
@@ -75,8 +72,8 @@ class _ButtonState extends State<Button> with MaterialStateMixin, SingleTickerPr
             final configuration = LinkTokenConfiguration(token: token);
             await PlaidLink.open(configuration: configuration);
           },
-          //customBorder: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          radius: 20, child: const Center(child: Text("Link Bank Account", style: TextStyle(color: Colours.fontColor),)),
+          customBorder: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          child: const Center(child: Text("Link Bank Account", style: TextStyle(color: Colours.fontColor),)),
         )
     );
   }
